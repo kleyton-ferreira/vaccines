@@ -12,20 +12,27 @@ interface ButtonProps {
 
 export const buttonVariants = {
     primary: css`
-    position: relative;
-    background: ${Colors.text.white};
-    overflow: hidden;
-    z-index: 1;
-  
+    border: 1px solid ${Colors.text.blue};
+    color: ${Colors.text.blue};
+    padding: 12px 36px;
+
+    transition: all 0.6s ease;
+
+    &:hover {
+      color: ${Colors.text.white};
+      background: ${Colors.text.blue};
+    }
   `,
 
     secondary: css`
-    color: ${Colors.text.white};
-    transition: all 0.3s ease;
-    display: inline-block;
+    border: 1px solid ${Colors.text.buttonwaths};
+    color: ${Colors.text.buttonwaths};
+    padding: 12px 36px;
+    transition: all 0.36s ease;
     
     &:hover {
       color: ${Colors.text.white};
+      background: ${Colors.text.buttonwaths};
     }
   `,
 
@@ -54,58 +61,26 @@ export const ButtonIcon = styled.div`
 `
 
 export const ButtonNav = styled.button<ButtonProps>`
-  position: relative;
-  z-index: 10003;
-  padding: 12px 40px;
-  border-radius: 30px;
-  border: none;
-  text-decoration: none;
-  font-weight: 400;
-  overflow: hidden;
   cursor: pointer;
- 
-
+  border-radius: 8px;
   display: flex;
   align-items: center;
   
+  border: none;
+  text-decoration: none;
+
   p {
     position: relative;
     z-index: 3;
     font-weight: 600;
-  }
-
-  h4 {
-    font-weight: 400;
-    color: ${Colors.text.buttonwaths};; 
-    display: flex;
-    align-items: center;
-    gap: 3px;
-    font-size: 18px;
-    margin-left: 10px;
+    font-size: 16px;
   }
 
 i {
   position: relative;
   top: 0;
   right: -60px;
-  z-index: 2;
-
 }
-
-i::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: -30px;
-  right: -80px;
- 
-  width: 130px;
-  height: 83px;
-}
-
-  strong {
-    font-weight: bold;
-  }
 
    ${({ variant = "primary" }) => buttonVariants[variant as ButtonVariant]}
 
