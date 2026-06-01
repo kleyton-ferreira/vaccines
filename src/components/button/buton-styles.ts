@@ -14,8 +14,6 @@ export const buttonVariants = {
   primary: css`
     border: 1px solid ${Colors.text.blue};
     color: ${Colors.text.blue};
-    padding: 12px 36px;
-
     transition: all 0.6s ease;
 
     &:hover {
@@ -27,7 +25,7 @@ export const buttonVariants = {
   secondary: css`
     border: 1px solid ${Colors.text.buttonwaths};
     color: ${Colors.text.buttonwaths};
-    padding: 12px 36px;
+    
     transition: all 0.36s ease;
     
     &:hover {
@@ -54,33 +52,28 @@ export const ButtonIcon = styled.div`
   align-items: center;
   font-weight: bold;
   position: absolute;
-  top: 6px;
-  right: 32px;
-  transform: rotate(316deg);
+  top: 8px;
+  left: 22px;
  }
 `
 
 export const ButtonNav = styled.button<ButtonProps>`
+  position: relative;
   cursor: pointer;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  
   border: none;
   text-decoration: none;
 
+  padding: 10px 40px;
+
   p {
     position: relative;
-    z-index: 3;
-    font-weight: 600;
-    font-size: 16px;
+    left: 6px;
+    font-weight: 500;
+    font-size: 17px;
   }
-
-i {
-  position: relative;
-  top: 0;
-  right: -60px;
-}
 
    ${({ variant = "primary" }) => buttonVariants[variant as ButtonVariant]}
 

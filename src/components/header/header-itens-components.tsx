@@ -61,12 +61,17 @@ const HeaderItens: FunctionComponent<HeaderItensProps> = ({
           ))}
         </HeaderNav>
         <HeaderButton>
-          <Button variant="primary">
-            {<FaRegUser size={20} />} Acesso Plataforma
-          </Button>
-          <Button variant="secondary">
-            <span> {<RiWhatsappLine size={20} />} </span> Fale no WhatsApp
-          </Button>
+          <Button
+            variant="primary"
+            icon={<FaRegUser size={20} />}
+            message="Acesso Plataforma"
+          />
+
+          <Button
+            variant="secondary"
+            icon={<RiWhatsappLine size={22} />}
+            message="Fale no WhatsApp"
+          />
           <HeaderButtonLink>
             {navIcon.map((icon, index) => (
               <Link key={`${icon.to}-${index}`} to={icon.to}>
