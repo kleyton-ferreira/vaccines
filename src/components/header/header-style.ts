@@ -34,7 +34,7 @@ export const HeaderNav = styled.div`
 
 export const HeaderButton = styled.div`
  display: flex;
- gap: 20px;
+ gap: 14px;
  align-items: center;
 `
 
@@ -59,6 +59,5 @@ export const HeaderButtonLink = styled.div`
    span:hover {
     background: ${Colors.background.backgroundBlue};
    }
- 
 `
 
