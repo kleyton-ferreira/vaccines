@@ -6,12 +6,12 @@ type ButtonVariant = "primary" | "secondary";
 type TextVariant = "textxl" | "text2x1"
 
 interface ButtonProps {
-    variant?: ButtonVariant;
-    variantText?: TextVariant
+  variant?: ButtonVariant;
+  variantText?: TextVariant
 }
 
 export const buttonVariants = {
-    primary: css`
+  primary: css`
     border: 1px solid ${Colors.text.blue};
     color: ${Colors.text.blue};
     padding: 12px 36px;
@@ -24,7 +24,7 @@ export const buttonVariants = {
     }
   `,
 
-    secondary: css`
+  secondary: css`
     border: 1px solid ${Colors.text.buttonwaths};
     color: ${Colors.text.buttonwaths};
     padding: 12px 36px;
@@ -39,11 +39,11 @@ export const buttonVariants = {
 };
 
 export const buttonFontsVariants = {
-    textxl: css`
+  textxl: css`
    font-size: 18px;
   `,
 
-    text2x1: css`
+  text2x1: css`
    font-size: 24px;
   `,
 }

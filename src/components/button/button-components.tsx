@@ -2,10 +2,7 @@ import { FunctionComponent, ButtonHTMLAttributes, MouseEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { ButtonIcon, ButtonNav } from './buton-styles'
 
-
-type ButtonVariant =
-  | 'primary'
-  | 'secondary'
+type ButtonVariant = 'primary' | 'secondary'
 type TextVariant = 'textxl' | 'text2x1'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
