@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import Colors from "../../theme/theme-color";
 
-type ButtonVariant = "primary" | "secondary";
+type ButtonVariant = "primary" | "secondary" | "btnIcon";
 
 type TextVariant = "textxl" | "text2x1"
 
@@ -33,6 +33,11 @@ export const buttonVariants = {
       background: ${Colors.text.buttonwaths};
     }
   `,
+
+  btnIcon: css`
+    border: none;
+    background: none;
+  `
 
 };
 
