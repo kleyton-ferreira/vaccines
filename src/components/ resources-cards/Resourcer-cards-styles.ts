@@ -14,13 +14,11 @@ export const ResouserCardsContainer = styled.div<OpenProps>`
   margin-top: 40px;
 
   background-color: ${({ $isOpen }) => ($isOpen ? '#1a3a6b' : '#ffffff')};
-  color: ${({ $isOpen }) => ($isOpen ? '#ffffff' : '#1D1D1F')};
-  
   max-height: ${({ $isOpen }) => ($isOpen ? '440px' : '0')};
   
   h3, p {
-    color: ${({ $isOpen }) => ($isOpen ? '#ffffff' : 'inherit')};
-    transition: color 0.6s ease;
+    filter: ${({ $isOpen }) => ($isOpen ? 'brightness(0) invert(2)' : 'none')};
+     transition: filter 0.6s ease;
     text-align: left;
   }
 
@@ -39,19 +37,19 @@ export const ResouserCardsContainer = styled.div<OpenProps>`
 `
 
 export const ResourceText = styled.div<OpenProps>`
+  filter: ${({ $isOpen }) => ($isOpen ? 'brightness(0) invert(2)' : 'none')};
   margin-top: 20px;
   overflow: hidden;
   max-height: ${({ $isOpen }) => ($isOpen ? '200px' : '0')};
   transition: max-height 0.4s ease;
 
- 
   p {
     font-size: 18px;
     text-align: left;
     line-height: 1.4;
-
-     color: ${({ $isOpen }) => ($isOpen ? '#ffffff' : 'inherit')};
+     transition: filter 0.6s ease;
   }
+
 `
 
 export const ResourceButton = styled.div`
@@ -66,7 +64,7 @@ export const ChevronIcon = styled.span<OpenProps>`
   display: inline-flex;
   transition: transform 0.6s ease;
   transform: ${({ $isOpen }) => ($isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
-  color: ${({ $isOpen }) => ($isOpen ? '#ffffff' : 'inherit')};
+  color: ${({ $isOpen }) => ($isOpen ? '#ffffff' : '#1D1D1F')};
 
   &:hover {
     transform: scale(1.1);
