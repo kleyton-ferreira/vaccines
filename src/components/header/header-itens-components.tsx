@@ -1,6 +1,9 @@
-import { FunctionComponent } from 'react'
+import { FunctionComponent, useContext } from 'react'
 
 import { Link } from 'react-router-dom'
+
+// UTILITZ
+import { UserContext } from '../../context/user-context'
 
 // STYLES
 import {
@@ -41,6 +44,8 @@ const HeaderItens: FunctionComponent<HeaderItensProps> = ({
   navItem,
   navIcon,
 }) => {
+  const { sendWhatsAppConfirmation } = useContext(UserContext)
+
   return (
     <>
       <HeaderContainer>
@@ -68,6 +73,7 @@ const HeaderItens: FunctionComponent<HeaderItensProps> = ({
           />
 
           <Button
+            onClick={sendWhatsAppConfirmation}
             variant="secondary"
             icon={<RiWhatsappLine size={22} />}
             message="Fale no WhatsApp"
